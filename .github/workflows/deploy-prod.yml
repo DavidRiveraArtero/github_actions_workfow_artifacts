@@ -2,7 +2,9 @@ name: Deploy Prod
 
 on:
     workflow_run: 
-        workflows: ["Build and Deploy"]
+        # Aqui le estamos diciendo que cuando termine el workflow "Build and Deploy (build-deploy.yml)"
+        # se dispare este workflow de despliegue a producción
+        workflows: ["Build and Deploy"] 
         types:
             - completed
 
