@@ -22,7 +22,7 @@ jobs:
             - uses: actions/upload-artifact@v7
               with:
                   name: octomatch
-                  path: dist/
+                  path: dist
     
     dev:
         name: Deploy to Dev
@@ -31,7 +31,7 @@ jobs:
             - uses: actions/download-artifact@v7
               with:
                   name: octomatch
-                  path: dist/
+                  path: website
             - name: Deploy to Dev
               run: |
                   echo "Downloading artifact content"
